@@ -18,6 +18,23 @@ public class Constants {
 
     public static final String NO_RECORDS = "No Record Found.";
 
+    public static class AbstractVarTag {
+
+        public static final String NULL_STRING = "";
+        public static final String SUB_CLASS_INITIALIZE = "assign_sub_class";
+        public static final String API_CALL = "api_access_permission";
+    }
+
+    //created
+    public static class PRIVATE_FILE {
+        public static final String CRASH_LOG_DIR_NAME = "CrashLogData";
+        public static final String JSON_DATA_DIR_NAME = "JsonData";
+        public static final String JSON_LIST_FILE_NAME = "json_dashboard_list_ui_file";
+        public static final String JSON_DEVICE_DETAILS_FILE_NAME = "json_device_details_ui_file";
+        public static final String JSON_MORE_MENU_OPTIONS_FILE_NAME = "json_more_menu_options_ui_file";
+        public static final String CRASH_LOG_FILE_NAME = "crash_logs";
+    }
+
 
     public interface Status {
         String APPROVE = "Approved";

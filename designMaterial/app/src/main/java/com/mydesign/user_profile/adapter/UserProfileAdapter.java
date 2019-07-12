@@ -32,7 +32,8 @@ public class UserProfileAdapter extends RecyclerView.Adapter<UserProfileAdapter.
     @Override
     public void onBindViewHolder(@NonNull ProfileViewHolder holder, int position) {
 
-        Result result = (Result) holder.binding.getModel();
+        //Result result = (Result) holder.binding.getModel();
+        Result result = (Result) itemList.get(position);
 
         holder.binding.setModel(result);
         }

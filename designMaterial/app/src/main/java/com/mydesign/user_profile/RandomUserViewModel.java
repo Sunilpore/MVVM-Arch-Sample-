@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 public class RandomUserViewModel extends BaseViewModel<RandomUserNavigator> {
 
+    private static final String TAG = "RandmTAG";
     private MutableLiveData<ArrayList<Result>> userLists = new MutableLiveData<>();
     private UserProfileListsModel userProfileListsModel;
 
@@ -25,8 +26,10 @@ public class RandomUserViewModel extends BaseViewModel<RandomUserNavigator> {
 
         mDisposable.add(DataProvider.getInstance().fetchUserProfileList(response -> {
             dialogVisibility.setValue(false);
+            Log.d(TAG,"gson: "+new Gson().toJson(response));
+
             getUserList().setValue(response);
-            Log.d("RandomActTAG","gson: "+new Gson().toJson(response));
+
         }, this::checkError));
 
     }
