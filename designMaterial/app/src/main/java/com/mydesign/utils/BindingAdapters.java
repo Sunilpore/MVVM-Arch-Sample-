@@ -10,9 +10,6 @@ import androidx.databinding.BindingAdapter;
 import com.google.android.material.textfield.TextInputLayout;
 
 
-/**
- * Created by Ganesh on 3/5/2018.
- */
 
 public class BindingAdapters {
 

@@ -1,5 +1,7 @@
 package com.mydesign.base;
 
+import android.app.Application;
+import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import com.mydesign.BaseApp;
@@ -16,6 +18,7 @@ public class BaseViewModel<N extends BaseNavigator> extends ViewModel {
     protected MutableLiveData<String> dialogMessage = new MutableLiveData<>("");
     protected CompositeDisposable mDisposable = new CompositeDisposable();
     MutableLiveData<Boolean> isTokenExpire = new MutableLiveData<>(false);
+
 
     void setNavigator(N navigator) {
         this.mNavigator = navigator;

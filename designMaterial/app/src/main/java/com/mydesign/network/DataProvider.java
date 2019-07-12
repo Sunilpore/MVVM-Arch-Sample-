@@ -82,11 +82,11 @@ public class DataProvider implements RemoteDataProvider {
         if (isNetworkAvailable()) {
             return mServices.updateRequest().subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
                     .subscribe(userProfileListsModel -> {
-                        if(userProfileListsModel == null){
-                            handleResponse(userProfileListsModel,error);
-                        } else {
-                            success.accept(userProfileListsModel.getResults());
+                        if (userProfileListsModel == null) {
+                            handleResponse(userProfileListsModel, error);
+                            return;
                         }
+                        success.accept(userProfileListsModel.getResults());
 
                     }, error);
         } else {
@@ -94,4 +94,5 @@ public class DataProvider implements RemoteDataProvider {
             return getDefaultDisposable();
         }
     }
+
 }

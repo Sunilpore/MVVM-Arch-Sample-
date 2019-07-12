@@ -26,6 +26,11 @@ public abstract class GenericAdapter<T, V extends ViewDataBinding> extends Recyc
         notifyDataSetChanged();
     }
 
+    public List<T> getList(){
+        return listItems;
+    }
+
+
     @NonNull
     @Override
     public GenericViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

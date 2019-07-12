@@ -15,9 +15,6 @@ import java.util.Objects;
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
-/**
- * Created by Narendar on 3/3/2018.
- */
 
 public class LoadingDialog extends AppCompatDialog {
 

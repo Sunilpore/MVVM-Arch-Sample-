@@ -67,23 +67,6 @@ public abstract class BaseActivity<T extends ViewDataBinding, V extends BaseView
         });
 
         mViewModel.isTokenExpire.observe(this, isTokenExpire -> {
-           /* if ((Boolean) isTokenExpire) {
-                tokenExpireDialog = new BottomSheetDialog(mContext, R.style.AppBottomSheetDialogTheme);
-                DialogUpdateRequestBinding successBinding = DialogUpdateRequestBinding.inflate(LayoutInflater.from(mContext));
-                tokenExpireDialog.setContentView(successBinding.getRoot());
-                tokenExpireDialog.setCancelable(false);
-                tokenExpireDialog.setCanceledOnTouchOutside(false);
-                tokenExpireDialog.show();
-                successBinding.txtRequestLabel.setText(getString(R.string.auth_failure));
-                successBinding.txtOk.setOnClickListener(v -> {
-                    tokenExpireDialog.dismiss();
-                    SPManager.getInstance().setUserLogin(false);
-                    Intent intent = new Intent(mContext, LoginActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-                    finish();
-                });
-            }*/
         });
     }
 
